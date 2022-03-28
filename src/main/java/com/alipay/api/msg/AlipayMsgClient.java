@@ -86,6 +86,8 @@ public class AlipayMsgClient {
                             }, new ThreadPoolExecutor.AbortPolicy());
                 }
                 if (heartBeatExecutor == null) {
+                    // 实现心跳检测 MARKKKK
+           
                     heartBeatExecutor = new ScheduledThreadPoolExecutor(1);
                     heartBeatExecutor.scheduleWithFixedDelay(new Runnable() {
                         public void run() {
